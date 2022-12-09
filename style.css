@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Manrope', sans-serif;
+}
+p{
+  margin: 0;
+}
+.divider-mobile{
+  display: block;
+}
+.divider-desktop{
+  display: none;
+}
+section{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: hsl(217, 19%, 24%);
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  margin-top: 150px;
+}
+button{
+  position: absolute;
+  bottom: -30px;
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+button:hover{
+  box-shadow: 0px 0px 10px hsl(150, 72%, 66%);
+}
+button:active{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.advice-id-text{
+  font-size: 17px;
+  color: hsl(150, 100%, 66%);
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+.advice-text{
+  font-size: 26px;
+  color: hsl(193, 38%, 86%);
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 992px) {
+  section{
+    width: 500px;
+    height: 300px;
+  }
+  button{
+    padding: 17px;
+  }
+  .divider-mobile{
+    display: none;
+  }
+  .divider-desktop{
+    display: block;
+  }
+}
+
